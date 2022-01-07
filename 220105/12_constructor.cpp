@@ -37,8 +37,7 @@ public:
 
   ~Point()
   {
-    cout << "~Point()" << endl;
-  }
+    cout << "~Point()" << endl; //객체를 힙에 생성할 때, new는 생성자가 호출되지만, malloc은 생성자가 호출되지 않습니다
 };
 
 // malloc vs new
