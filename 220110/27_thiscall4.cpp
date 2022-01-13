@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -57,6 +56,7 @@ public:
     // virtual bool threadLoop() { return false; }
     virtual bool threadLoop() = 0;
 };
+//-----------------------
 
 //  Thread 라이브러리를 사용하는 방법.
 class MyThread : public Thread {
