@@ -32,7 +32,7 @@ class LineEdit {
 
     // 변하지 않는 코드(공통성)에서 변해야 하는 것(가변성)이 있다면
     // 변해야 하는 것을 '가상함수'로 뽑아낸다.
-    virtual bool validate(char c) { return isdigit(c); }
+    virtual bool Validate(char c) { return isdigit(c); }
 
 public:
     std::string GetData()
@@ -47,7 +47,7 @@ public:
                 break;
 
             // if (isdigit(c)) {
-            if (validate(c)) {
+            if (Validate(c)) {
                 data.push_back(c);
                 cout << c;
             }
@@ -61,7 +61,7 @@ public:
 // 이제 정책을 변경하고 싶다면, 파생 클래스에서 가상 함수를 재정의하면 됩니다.
 class AddressLineEdit : public LineEdit {
 public:
-    bool validate(char c) override
+    bool Validate(char c) override
     {
         return true;
     }
